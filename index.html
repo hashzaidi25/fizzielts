@@ -3331,7 +3331,7 @@ document.getElementById('close-popup').addEventListener('click', function() {
                                     </div>
                                 </a>
                             </li>
-                            <li class="hidden">
+                            <li class="additional hidden">
                                 <a id="team-tab6-tab" data-bs-toggle="tab" data-bs-target="#team-tab7" role="tab" aria-controls="team-tab7" aria-selected="false">
                                     <div class="rbt-team-thumbnail">
                                         <div class="thumb">
@@ -3340,7 +3340,7 @@ document.getElementById('close-popup').addEventListener('click', function() {
                                     </div>
                                 </a>
                             </li>
-                            <li class="hidden">
+                            <li class="additional hidden">
                                 <a id="team-tab6-tab" data-bs-toggle="tab" data-bs-target="#team-tab8" role="tab" aria-controls="team-tab8" aria-selected="false">
                                     <div class="rbt-team-thumbnail">
                                         <div class="thumb">
@@ -3349,7 +3349,7 @@ document.getElementById('close-popup').addEventListener('click', function() {
                                     </div>
                                 </a>
                             </li>
-                            <li class="hidden">
+                            <li class="additional hidden">
                                 <a id="team-tab6-tab" data-bs-toggle="tab" data-bs-target="#team-tab9" role="tab" aria-controls="team-tab9" aria-selected="false">
                                     <div class="rbt-team-thumbnail">
                                         <div class="thumb">
@@ -3358,7 +3358,7 @@ document.getElementById('close-popup').addEventListener('click', function() {
                                     </div>
                                 </a>
                             </li>
-                            <li class="hidden">
+                            <li class="additional hidden">
                                 <a id="team-tab6-tab" data-bs-toggle="tab" data-bs-target="#team-tab10" role="tab" aria-controls="team-tab10" aria-selected="false">
                                     <div class="rbt-team-thumbnail">
                                         <div class="thumb">
@@ -3367,7 +3367,7 @@ document.getElementById('close-popup').addEventListener('click', function() {
                                     </div>
                                 </a>
                             </li>
-                            <li class="hidden">
+                            <li class="additional hidden">
                                 <a id="team-tab6-tab" data-bs-toggle="tab" data-bs-target="#team-tab11" role="tab" aria-controls="team-tab11" aria-selected="false">
                                     <div class="rbt-team-thumbnail">
                                         <div class="thumb">
@@ -3376,7 +3376,7 @@ document.getElementById('close-popup').addEventListener('click', function() {
                                     </div>
                                 </a>
                             </li>
-                            <li class="hidden">
+                            <li class="additional hidden">
                                 <a id="team-tab6-tab" data-bs-toggle="tab" data-bs-target="#team-tab12" role="tab" aria-controls="team-tab12" aria-selected="false">
                                     <div class="rbt-team-thumbnail">
                                         <div class="thumb">
@@ -3386,25 +3386,28 @@ document.getElementById('close-popup').addEventListener('click', function() {
                                 </a>
                             </li>
                         </ul>
-                        <div class="rbt-btn btn-gradient hover-icon-reverse rbt-show-more-btn" onclick="toggleTestimonials()">Show More</div>
+                        <div class="rbt-btn btn-gradient hover-icon-reverse show-more-btn" style="cursor: pointer; display: block; margin-top: 20px; text-align: center; width: 50%; margin-left: 25%;" onclick="toggleTestimonials()">Show More</div>    
                     </div>
+                    
                 </div>
             </div>
         </div>
 
         <script>
             function toggleTestimonials() {
-                const hiddenTestimonials = document.querySelectorAll('li.hidden');
-                hiddenTestimonials.forEach(testimonial => {
-                    testimonial.classList.toggle('hidden');
-                });
-                const showMoreBtn = document.querySelector('.rbt-show-more-btn');
-                if (showMoreBtn.textContent === 'Show More') {
-                    showMoreBtn.textContent = 'Show Less';
-                } else {
-                    showMoreBtn.textContent = 'Show More';
-                }
+            const additionalTestimonials = document.querySelectorAll('li.additional');
+            const showMoreBtn = document.querySelector('.show-more-btn');
+            
+            additionalTestimonials.forEach(testimonial => {
+                testimonial.classList.toggle('hidden');
+            });
+            
+            if (showMoreBtn.textContent === 'Show More') {
+                showMoreBtn.textContent = 'Show Less';
+            } else {
+                showMoreBtn.textContent = 'Show More';
             }
+        }
         </script>
                     
         <!-- Start Blog Style -->
